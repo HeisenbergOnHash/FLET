@@ -15,6 +15,6 @@ COPY . /FLET/
 
 ENV PATH="/venv/bin:$PATH"
 
-EXPOSE 8080
+EXPOSE 5001
 
 CMD ["flet","run", "main.py"]
