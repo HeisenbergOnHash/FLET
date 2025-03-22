@@ -157,5 +157,5 @@ def main(page: ft.Page):
         page.go("/")
 
     show_login()
-
-ft.app(target=main, view=ft.AppView.WEB_BROWSER, port=5001)
+    
+ft.app(target=main, view=None, port=5001)
