@@ -1,5 +1,6 @@
 import flet as ft
 from css import Main_card_css
+from login import login_container
 
 
 def main(page: ft.Page):
@@ -18,7 +19,11 @@ def main(page: ft.Page):
   content=ft.Container(padding=Main_card_css["card"]["padding"], bgcolor=Main_card_css["card"]["bgcolor"], border_radius=Main_card_css["card"]["border_radius"], 
   content=ft.Column(spacing=Main_card_css["card"]["spacing"], controls=[toggle_bar, header_bar, tag_line_bar])))
   
-  container = ft.Container(content=card)
+  # container = ft.Container(content=[card, login_container])
+  container = ft.Container(content=ft.Column(
+            controls=[card, login_container]),
+            alignment=ft.MainAxisAlignment.CENTER)
+
   page.add(container)
 
 
